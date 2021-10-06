@@ -1,0 +1,718 @@
+@font-face {
+    font-family: 'open_sans';
+    src: url('../font/OpenSans-Regular.ttf');
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.clearfix{
+    float: none;
+    clear: both;
+}
+body{
+    margin: 5px;
+    font-family: open_sans;
+    color: #333;
+}
+
+/* CABECERA */
+#header{
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    height: 60px;
+    justify-content:space-between;
+    background-color: rgb(19, 198, 220);
+}
+#header #tresBarras{
+    margin: 10px 0px 0px 10px;
+}
+#header .oculto{
+    display:none;
+}
+#header input[type="text"]{
+    width: 430px;
+    height: 30px;
+    margin-top: 13px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding-left: 15px;
+}
+#header #iconos{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    margin-top: 2px;
+}
+#header ul{
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    width: 450px;
+    list-style: none;
+    margin-top: 21px;
+}
+#header ul li ~li{
+    border-left: 1px solid white;
+    text-align: center;
+}
+
+#header ul li:hover a{
+    color: #333;
+}
+
+#header ul li a{
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+}
+
+/* PAGINA */
+
+#container{
+    display: flex;
+}
+
+/* BARRA IZQUIERDA */
+#aside{
+    width: 5%;
+    margin-top: 10px;
+}
+#aside img{
+    border-radius: 100%;
+}
+#aside  img:hover{
+    animation: girar 800ms linear;
+}
+@keyframes girar{
+    from{
+        transform: rotate(360deg);
+    }
+}
+/* PARTE SUPERIOR */
+#content{
+    width: 90%;
+}
+/* MENU DE ARRIBA */
+#content #menu{
+    border-bottom: 1px solid gray;
+}
+#content #menu ul{
+    display: flex;
+    list-style: none;
+}
+
+#content #menu ul li{
+    text-decoration: none;
+    padding: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+#content #menu ul li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+#content #menu ul li:hover a{
+    text-decoration: underline;
+}
+#content #menu li+li:before {
+    padding: 8px;
+    color: gray;
+    content: "/\00a0";
+}
+
+/* CARACTERISTICAS DEL PRODUCTO (CENTRO) */
+#content #parte_superior #imagen_producto{
+    overflow: hidden;
+    width: 350px;
+}
+#content #parte_superior #imagen_producto img:hover{
+    transform: scale(1.1);
+}
+#content #parte_superior{
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid gray;
+    font-size: 12px;
+}
+#parte_superior #datos_compra{
+    width: 40%;
+    margin-left: 40px;
+    color: gray;
+}
+#datos_compra h2{
+    letter-spacing: 1px;
+    color: #333;
+    font-size: 22px;
+}
+#datos_compra > #datos_producto{
+    display: block;
+    justify-content: space-between;
+    list-style: none;
+    padding: 10px;
+    padding-left: 0px;
+}
+#datos_compra > #datos_producto li{
+    color: #6F6F6F;
+    float: left;
+    margin-right: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+#datos_compra #menu_compra ul{
+    display: flex;
+    flex-flow: row-reverse wrap;
+    list-style: none;
+}
+#menu_compra ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #6F6F6F;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+#menu_compra a{
+    color: #6F6F6F;
+}
+
+#menu_compra li:hover a{
+    color: rgb(113, 0, 194);
+}
+
+#datos_compra #envio_express{
+    display: flex;
+    text-transform: uppercase;
+}
+#envio_express h3{
+    margin-top: 2px;
+    border-bottom: 1px solid rgb(158, 157, 157);
+    width: 100%;
+    height: 20px;
+}
+
+#datos_compra #compra_ya{
+    display: flex;
+    margin-top: 5px;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+#compra_ya img{
+    height: 30px;
+}
+#compra_ya #compra_ya_texto{
+    display: block;
+}
+#compra_ya_texto p{
+    color: rgb(113, 0, 194);
+    font-weight: bold;
+    font-style: oblique;
+}
+
+#datos_compra #cobertura{
+    display: flex;
+    margin-top:5px;
+}
+#cobertura #cobertura_texto{
+    display: block;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+#datos_compra #info_compra{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+#info_compra li{
+    margin-bottom: 5px;
+}
+#datos_compra a{
+    text-decoration: none;
+}
+
+/* CONTENIDO DE HACER COMPRA (DERECHA) */
+#content #parte_superior #hacer_compra{
+    width: 20%;
+    display: block;
+    margin: 10px;
+}
+
+#hacer_compra #precio{
+    float: right;
+}
+#hacer_compra #precio h2{
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: rgb(113, 0, 194);
+}
+#hacer_compra #precio h2 span{
+    font-size: 25px;
+}
+#hacer_compra #precio p{
+    float: right;
+    color: gray;
+    font-size: 12px;
+}
+#hacer_compra #boton_compra{
+    float: right;
+    width: 85%;
+    display:block;
+    margin: 0px auto;
+    text-align: left;
+    background-color: rgb(134, 202, 32);
+    height: 45px;
+    border-radius: 6px;
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    overflow: hidden;
+}
+#hacer_compra #boton_compra:hover{
+    box-shadow: 0px 0px 5px green inset;
+}
+#hacer_compra #boton_compra:hover span{
+    animation: aparition 500ms linear;
+    position: relative;
+}
+@keyframes aparition{
+    from{
+        left: -100px;
+    }
+    to{
+        left: 0px;
+    }
+}
+#hacer_compra #boton_compra span{
+    margin-left: 40px;
+}
+
+#hacer_compra #stock{
+    margin: 0px auto;
+    text-align: center;
+}
+#hacer_compra #stock img{
+    float: left;
+    margin-left: 50px;
+}
+#hacer_compra #stock #titulo_stock{
+    float: left;
+    text-align: left;
+    text-transform: uppercase;
+}
+#hacer_compra #stock #titulo_stock p:first-child{
+    color: rgb(113, 0, 194);
+    font-weight: bold;
+}
+#hacer_compra #stock #titulo_stock p:last-child{
+    color: gray;
+}
+#hacer_compra #financiar{
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 30px;
+}
+#hacer_compra #financiar h3{
+    margin-bottom: 25px;
+}
+#hacer_compra #financiar p{
+    margin-top:5px;
+}
+#hacer_compra #financiar p:nth-child(2){
+    font-weight: bold;
+}
+#hacer_compra #financiar p:nth-child(3) span{
+    font-weight: bold;
+}
+#hacer_compra #financiar p:nth-child(4) span{
+    font-weight: bold;
+}
+#hacer_compra #financiar p:nth-child(4){
+    text-decoration: underline;
+}
+
+/* PARTE INFERIOR */
+
+#content #parte_inferior{
+    display: flex;
+    margin-top: 20px;
+    padding: 10px;
+    margin-left: 10px;
+}
+#parte_inferior #contenido_producto{
+    width: 80%;
+}
+
+/* BARRA ELECCION */
+#contenido_producto nav{
+    display: flex;
+    justify-content: space-between;
+}
+#contenido_producto nav ul{
+    display: flex;
+}
+
+#contenido_producto nav ul li{
+    list-style: none;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 5px;
+    height: 35px;
+    background-color: rgb(228, 227, 227);
+    line-height: 35px;
+    cursor: pointer;
+}
+
+#contenido_producto nav a{
+    text-decoration: none;
+    color: gray;
+}
+#contenido_producto nav li:hover a{
+    color: white;
+}
+
+#contenido_producto nav li:hover{
+    background-color: gray;
+}
+
+#contenido_producto nav #mg{
+    margin-right: 100px;
+    background-color: rgb(19, 120, 245);
+    width: 95px;
+    text-align: center;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+#mg span{
+    font-size: 10px;
+    margin: 1px;
+    color: white;
+    font-weight: bold;
+}
+#mg:hover img{
+    animation: agitar 500ms linear;
+}
+@keyframes agitar{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(20deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+#parte_inferior #caracteristicas{
+    margin-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid gray;
+}
+#caracteristicas p{
+    font-size: 15px;
+    padding-top: 10px;
+    padding-right: 80px;
+    text-align: justify;
+}
+#caracteristicas p:nth-child(2){
+    color: gray;
+}
+#caracteristicas #contenido_paquete{
+    margin-top: 20px;
+}
+#contenido_paquete ul{
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+#parte_inferior #conversacion{
+    padding-top: 50px;
+    padding-left: 10%;
+    padding-bottom: 10%;
+    border-bottom: 1px solid gray;
+}
+
+#parte_inferior #conversacion .chat{
+    display: flex;
+    margin-top: 30px;
+}
+#parte_inferior #conversacion .chat:nth-child(2){
+    margin-left: 150px;
+}
+#parte_inferior #conversacion .chat .carita_fecha{
+    font-size: 10px;
+}
+#parte_inferior #conversacion .chat .hablando{
+    background-color: rgb(228, 227, 227);
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+#parte_inferior #conversacion .chat:nth-child(2) .hablando{
+    text-align: right;
+}
+#parte_inferior #conversacion .chat .hablando p{
+    margin-top: 10px
+}
+#conversacion #opinion{
+    float: right;
+    margin: 30px;
+    background-color: gray;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+#conversacion #opinion:hover{
+    box-shadow: 0px 0px 3px #333 inset;
+}
+
+#parte_inferior #opciones_envio #no_envio{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+    font-weight: bold;
+}
+
+/* COLUMNA DESTACADOS */
+#parte_inferior #destacado{
+    width: 20%;
+    text-align: center;
+    color:gray;
+}
+#destacado h2{
+    text-align: left;
+    font-size: 16px;
+}
+.anuncio_destacado{
+    margin-top: 20px;
+}
+#destacado .anuncio_destacado img{
+    margin: 20px;
+}
+
+#destacado .anuncio_destacado h4{
+    margin: 15px;
+}
+.anuncio_destacado .precio{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    height: 40px;
+}
+.anuncio_destacado .tachado{
+    text-decoration: line-through;
+    font-size: 16px;
+}
+
+.anuncio_destacado .ceros{
+    font-size: 10px;
+}
+
+.anuncio_destacado .precio_ahora{
+    margin-left: 10px;
+    font-size: 25px;
+    color: #333;
+}
+.anuncio_destacado .ceros:last-child{
+    height: 100%;
+    line-height: 40px;
+    color:#333;
+}
+.anuncio_destacado > p{
+    color: rgb(134, 202, 32);
+    font-size: 12px;
+    font-weight: bold;
+    width: 75%;
+    margin: 0px auto;
+}
+
+.anuncio_destacado #p_pizza{
+    color: #333;
+    width: 70%;
+}
+
+/* FOOTER */
+#footer #pagos{
+    display: flex;
+    justify-content: center;
+}
+#footer #pagos li{
+    list-style: none;
+}
+
+@media (max-width: 1200px){
+    #header ul{
+        width: auto;
+        font-size: 30px;
+        margin-left: auto;
+        margin-top: 10px;
+    }
+    #header .oculto{
+        display: block;
+    }
+    #header ul li:nth-child(2){
+        border-right: 1px solid white;
+    }
+    #header input[type="text"],
+    #header ul li:nth-child(3),
+    #header ul li:nth-child(4),
+    #header ul li:nth-child(5),
+    #header #iconos #carrito,
+    #parte_inferior #destacado
+    {
+        display: none;
+    }
+    #container #content{
+        width: 100%;
+    }
+    #container aside{
+        display:none;
+    }
+    #content #menu{
+        border-bottom: none;
+    }
+    #content #parte_superior{
+        margin: 10px;
+        padding-right: 0px;
+    }
+    #datos_compra h2{
+        position: relative;
+        top: -350px;
+    }
+    #content #parte_superior #imagen_producto{
+        width: 400px;
+        margin: 0px auto;
+        text-align: center;
+        margin-top: 50px;
+    }
+    #parte_superior #datos_compra {
+        width: 67.48%;
+        margin-left: 0px;
+    }
+    #content #parte_superior #hacer_compra{
+        padding-top: 40px;
+        width: 30%;
+    }
+    #hacer_compra #boton_compra{
+        width: 100%;
+    }
+    #parte_inferior #contenido_producto{
+        width: 100%;
+    }
+    #contenido_producto #eleccion{
+        display: block;
+    }
+    #eleccion ul{
+        width: 300px;
+    }
+    #contenido_producto nav ul li{
+        width: 100%;
+        padding: 0px;
+        text-align: center;
+    }
+    #eleccion #mg{
+        margin-left: 5px;
+        margin-top: 15px;
+    }
+    #caracteristicas p{
+        padding: 5px;
+    }
+    #parte_inferior #conversacion{
+        padding-left: 0px;
+    }
+    #contenido_producto #conversacion .chat .hablando{
+        width: 90%;
+    }
+    #contenido_producto #conversacion .chat .carita_fecha:first-child{
+        margin-left: 100px;
+    }
+    #contenido_producto #conversacion .chat .carita_fecha:last-child{
+        margin-right: 100px;
+    }
+    #parte_inferior #conversacion .chat:nth-child(2){
+        margin-left: 0px;
+    }
+
+    #conversacion #opinion{
+        position: absolute;
+        top: 905px;
+        left: 70%;
+        border-radius: 0px;
+        background-color: rgb(228, 227, 227);
+        color: gray;
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 900px){
+    body{
+        width: 100%;
+    }
+    #header ul,
+    #menu ul li:nth-child(1),
+    #menu ul li:nth-child(4),
+    #conversacion #opinion,
+    #datos_compra #menu_compra ul li:nth-child(1),
+    #datos_compra #menu_compra ul li:nth-child(2)
+    {
+        display: none;
+    }
+    #header #iconos{
+        margin-left: auto;
+    }
+    #parte_superior #datos_compra {
+        width: 100%;
+    }
+    #content #parte_superior #hacer_compra{
+        padding-top: 40px;
+        width: 100%;
+    }
+    #hacer_compra #stock{
+        margin-left: 32%;
+    }
+    #datos_compra #menu_compra ul li{
+        border-right: none;
+    }
+    #footer img{
+        width: 80px;
+    }
+}
+
+@media (max-width: 500px){
+    #header #iconos{
+        display:none;
+    }
+    #footer img{
+        width: 50px;
+    }
+}
