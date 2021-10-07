@@ -2,7 +2,7 @@
 Práctica hecha sólo con HTML y CSS en la asignatura Tecnologías Web (2020-2021)
 
 ## Página Maquetada 💻
-https://jesusmarzor.com/Practica-CSS/
+https://jesusmarzor.com/Armazon/
 
 ## Página Original 🙌
 [Imagen](maquetación.png)
